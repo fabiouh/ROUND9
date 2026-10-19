@@ -41,7 +41,10 @@ export class CrewsService {
     const crew = await this.prisma.crew.findUniqueOrThrow({
       where: { id },
       include: {
-        members: { orderBy: { joinedAt: 'asc' }, include: { user: { select: publicUserSelect } } },
+        members: {
+          orderBy: { joinedAt: 'asc' },
+          include: { user: { select: { ...publicUserSelect, showHandicapToCrews: true, golfProfile: { select: { handicapIndex: true } } } } },
+        },
         rounds: {
           where: { tournament: null },
           orderBy: { scheduledAt: 'desc' },
@@ -51,7 +54,13 @@ export class CrewsService {
         tournaments: { orderBy: { createdAt: 'desc' }, take: 20, include: { round: { select: { scheduledAt: true } } } },
       },
     });
-    return { ...crew, myRole: me.role };
+    // Handicaps are shared with crew mates only when the member allows it.
+    const members = crew.members.map(({ user: { showHandicapToCrews, golfProfile, ...user }, ...m }) => ({
+      ...m,
+      user,
+      handicapIndex: showHandicapToCrews ? (golfProfile?.handicapIndex ?? null) : null,
+    }));
+    return { ...crew, members, myRole: me.role };
   }
 
   async update(user: User, id: string, dto: UpdateCrewDto) {
