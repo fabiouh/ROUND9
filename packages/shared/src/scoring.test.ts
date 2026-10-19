@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { courseHandicap, playingHandicap, strokeIndexRanks, strokesReceived } from './handicap';
-import { computeLeaderboard, stablefordPoints, type ScoringHole } from './scoring';
+import { courseHandicap, playingHandicap, strokeIndexRanks, strokesReceived } from './handicap.js';
+import { computeLeaderboard, stablefordPoints, type ScoringHole } from './scoring.js';
 
 const holes18: ScoringHole[] = Array.from({ length: 18 }, (_, i) => ({ holeNumber: i + 1, par: 4, strokeIndex: i + 1 }));
 

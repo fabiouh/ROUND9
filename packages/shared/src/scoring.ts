@@ -1,5 +1,5 @@
-import type { AvailableFormat } from './enums';
-import { strokeIndexRanks, strokesReceived } from './handicap';
+import type { AvailableFormat } from './enums.js';
+import { strokeIndexRanks, strokesReceived } from './handicap.js';
 
 export interface ScoringHole {
   holeNumber: number;

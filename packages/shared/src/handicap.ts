@@ -1,4 +1,4 @@
-import type { HolesCount, RoundFormat } from './enums';
+import type { HolesCount, RoundFormat } from './enums.js';
 
 export interface TeeRating {
   courseRating: number;

@@ -1,6 +1,6 @@
 import { z } from 'zod';
-import { AVAILABLE_FORMATS, EXPERIENCE_LEVELS, HANDICAP_MAX, HANDICAP_MIN, USERNAME_PATTERN } from './enums';
-import { FREE_PLAN } from './pricing';
+import { AVAILABLE_FORMATS, EXPERIENCE_LEVELS, HANDICAP_MAX, HANDICAP_MIN, USERNAME_PATTERN } from './enums.js';
+import { FREE_PLAN } from './pricing.js';
 
 // Error messages are i18n keys under `validation.*`.
 export const profileSchema = z.object({
