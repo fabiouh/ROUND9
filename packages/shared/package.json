@@ -1,0 +1,24 @@
+{
+  "name": "@round9/shared",
+  "version": "0.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -p tsconfig.json --watch --preserveWatchOutput",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "zod": "4.3.3"
+  },
+  "devDependencies": {
+    "@round9/config": "workspace:*",
+    "typescript": "5.9.3",
+    "vitest": "4.1.12"
+  }
+}
