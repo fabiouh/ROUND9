@@ -48,7 +48,7 @@ export const courseSchema = z.object({
   holes: z
     .array(z.object({ par: z.coerce.number().int().min(3).max(6), strokeIndex: z.coerce.number().int().min(1).max(18) }))
     .refine((h) => h.length === 9 || h.length === 18, 'holesCount')
-    .refine((h) => new Set(h.map((x) => x.strokeIndex)).size === h.length, 'strokeIndexUnique'),
+    .refine((h) => new Set(h.map((x) => x.strokeIndex)).size === h.length && h.every((x) => x.strokeIndex <= h.length), 'strokeIndexUnique'),
   tees: z
     .array(
       z.object({

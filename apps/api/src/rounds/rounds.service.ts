@@ -41,9 +41,9 @@ export class RoundsService {
     });
   }
 
-  list(user: User, scope: 'upcoming' | 'completed') {
+  async list(user: User, scope: 'upcoming' | 'completed') {
     const upcoming = scope === 'upcoming';
-    return this.prisma.round.findMany({
+    const rounds = await this.prisma.round.findMany({
       where: {
         ...roundVisibleTo(user.id),
         tournament: null,
@@ -51,7 +51,13 @@ export class RoundsService {
       },
       orderBy: { scheduledAt: upcoming ? 'asc' : 'desc' },
       take: 50,
-      include: roundSummaryInclude,
+      include: { ...roundSummaryInclude, participants: { where: { userId: user.id }, select: { scores: { select: { strokes: true } } } } },
+    });
+    // The caller's total strokes, only when every played hole has a score (no pick-ups).
+    return rounds.map(({ participants, ...r }) => {
+      const scores = participants[0]?.scores ?? [];
+      const complete = scores.length === r.holesCount && scores.every((s) => s.strokes !== null);
+      return { ...r, myStrokes: complete ? scores.reduce((a, s) => a + s.strokes!, 0) : null };
     });
   }
 

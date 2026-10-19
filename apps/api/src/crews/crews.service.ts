@@ -49,7 +49,7 @@ export class CrewsService {
           where: { tournament: null },
           orderBy: { scheduledAt: 'desc' },
           take: 20,
-          include: { course: { select: { name: true } }, _count: { select: { participants: true } } },
+          include: { course: { select: { id: true, name: true, city: true } }, _count: { select: { participants: { where: { status: 'JOINED' } } } } },
         },
         tournaments: { orderBy: { createdAt: 'desc' }, take: 20, include: { round: { select: { scheduledAt: true } } } },
       },
