@@ -1,0 +1,272 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum RoundFormat {
+  STROKE_PLAY
+  STABLEFORD
+  MATCH_PLAY
+}
+
+enum RoundStatus {
+  SCHEDULED
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+}
+
+enum TournamentStatus {
+  UPCOMING
+  LIVE
+  COMPLETED
+  CANCELLED
+}
+
+enum CrewRole {
+  OWNER
+  ADMIN
+  MEMBER
+}
+
+enum ParticipantStatus {
+  INVITED
+  JOINED
+  WITHDRAWN
+}
+
+enum ExperienceLevel {
+  BEGINNER
+  INTERMEDIATE
+  ADVANCED
+  EXPERT
+}
+
+model User {
+  id                  String   @id @default(cuid())
+  auth0Subject        String   @unique
+  email               String?
+  displayName         String?
+  username            String?  @unique
+  avatarUrl           String?
+  country             String?  @db.Char(2)
+  onboardingStep      Int      @default(0)
+  onboardingCompleted Boolean  @default(false)
+  showHandicapToCrews Boolean  @default(true)
+  notifyInvitations   Boolean  @default(true)
+  notifyScores        Boolean  @default(false)
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  golfProfile      GolfProfile?
+  ownedCrews       Crew[]             @relation("CrewOwner")
+  crewMemberships  CrewMember[]
+  createdRounds    Round[]            @relation("RoundCreator")
+  participations   RoundParticipant[]
+  organizedEvents  Tournament[]       @relation("TournamentOrganizer")
+  sentInvitations  Invitation[]       @relation("InvitationCreator")
+  createdCourses   GolfCourse[]       @relation("CourseCreator")
+}
+
+model GolfProfile {
+  id              String           @id @default(cuid())
+  userId          String           @unique
+  handicapIndex   Decimal?         @db.Decimal(3, 1)
+  preferredFormat RoundFormat?
+  experienceLevel ExperienceLevel?
+  homeCourseId    String?
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+
+  user       User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  homeCourse GolfCourse? @relation(fields: [homeCourseId], references: [id], onDelete: SetNull)
+}
+
+model Crew {
+  id          String   @id @default(cuid())
+  name        String
+  slug        String   @unique
+  description String?
+  avatarUrl   String?
+  ownerId     String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  owner       User         @relation("CrewOwner", fields: [ownerId], references: [id], onDelete: Cascade)
+  members     CrewMember[]
+  rounds      Round[]
+  tournaments Tournament[]
+  invitations Invitation[]
+
+  @@index([ownerId])
+}
+
+model CrewMember {
+  id       String   @id @default(cuid())
+  crewId   String
+  userId   String
+  role     CrewRole @default(MEMBER)
+  joinedAt DateTime @default(now())
+
+  crew Crew @relation(fields: [crewId], references: [id], onDelete: Cascade)
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([crewId, userId])
+  @@index([userId])
+}
+
+/// Exactly one of crewId / roundId / tournamentId is set (CHECK constraint in migration).
+model Invitation {
+  id           String    @id @default(cuid())
+  tokenHash    String    @unique
+  invitedEmail String?
+  createdById  String
+  crewId       String?
+  roundId      String?
+  tournamentId String?
+  expiresAt    DateTime
+  acceptedAt   DateTime?
+  revokedAt    DateTime?
+  createdAt    DateTime  @default(now())
+
+  createdBy  User        @relation("InvitationCreator", fields: [createdById], references: [id], onDelete: Cascade)
+  crew       Crew?       @relation(fields: [crewId], references: [id], onDelete: Cascade)
+  round      Round?      @relation(fields: [roundId], references: [id], onDelete: Cascade)
+  tournament Tournament? @relation(fields: [tournamentId], references: [id], onDelete: Cascade)
+
+  @@index([crewId])
+  @@index([roundId])
+  @@index([tournamentId])
+}
+
+model GolfCourse {
+  id          String   @id @default(cuid())
+  name        String
+  country     String   @db.Char(2)
+  city        String?
+  location    String?
+  createdById String?
+  createdAt   DateTime @default(now())
+
+  createdBy    User?         @relation("CourseCreator", fields: [createdById], references: [id], onDelete: SetNull)
+  tees         CourseTee[]
+  holes        GolfHole[]
+  rounds       Round[]
+  golfProfiles GolfProfile[]
+
+  @@index([name])
+}
+
+model CourseTee {
+  id             String  @id @default(cuid())
+  courseId       String
+  name           String
+  genderCategory String?
+  courseRating   Decimal @db.Decimal(4, 1)
+  slopeRating    Int
+
+  course GolfCourse @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  rounds Round[]
+
+  @@index([courseId])
+}
+
+/// shortcut: hole par/stroke index are per course; add a teeId column when tee-specific hole data is needed.
+model GolfHole {
+  id          String @id @default(cuid())
+  courseId    String
+  holeNumber  Int
+  par         Int
+  strokeIndex Int
+
+  course GolfCourse @relation(fields: [courseId], references: [id], onDelete: Cascade)
+
+  @@unique([courseId, holeNumber])
+}
+
+model Round {
+  id          String      @id @default(cuid())
+  title       String
+  creatorId   String
+  courseId    String
+  teeId       String?
+  crewId      String?
+  scheduledAt DateTime
+  holesCount  Int
+  format      RoundFormat
+  status      RoundStatus @default(SCHEDULED)
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  creator      User               @relation("RoundCreator", fields: [creatorId], references: [id], onDelete: Cascade)
+  course       GolfCourse         @relation(fields: [courseId], references: [id], onDelete: Restrict)
+  tee          CourseTee?         @relation(fields: [teeId], references: [id], onDelete: SetNull)
+  crew         Crew?              @relation(fields: [crewId], references: [id], onDelete: SetNull)
+  participants RoundParticipant[]
+  scores       HoleScore[]
+  invitations  Invitation[]
+  tournament   Tournament?
+
+  @@index([creatorId])
+  @@index([crewId])
+  @@index([scheduledAt])
+}
+
+model RoundParticipant {
+  id              String            @id @default(cuid())
+  roundId         String
+  userId          String
+  status          ParticipantStatus @default(JOINED)
+  playingHandicap Int?
+  joinedAt        DateTime          @default(now())
+
+  round  Round       @relation(fields: [roundId], references: [id], onDelete: Cascade)
+  user   User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  scores HoleScore[]
+
+  @@unique([roundId, userId])
+  @@index([userId])
+}
+
+model HoleScore {
+  id            String   @id @default(cuid())
+  roundId       String
+  participantId String
+  holeNumber    Int
+  /// null = picked up / no score
+  strokes       Int?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  round       Round            @relation(fields: [roundId], references: [id], onDelete: Cascade)
+  participant RoundParticipant @relation(fields: [participantId], references: [id], onDelete: Cascade)
+
+  @@unique([participantId, holeNumber])
+  @@index([roundId])
+}
+
+/// A private single-day tournament; its course, date, format and scores live on the linked round.
+model Tournament {
+  id              String           @id @default(cuid())
+  name            String
+  description     String?
+  organizerId     String
+  crewId          String?
+  roundId         String           @unique
+  maxParticipants Int
+  status          TournamentStatus @default(UPCOMING)
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+
+  organizer   User         @relation("TournamentOrganizer", fields: [organizerId], references: [id], onDelete: Cascade)
+  crew        Crew?        @relation(fields: [crewId], references: [id], onDelete: SetNull)
+  round       Round        @relation(fields: [roundId], references: [id], onDelete: Cascade)
+  invitations Invitation[]
+
+  @@index([organizerId])
+  @@index([crewId])
+}
