@@ -1,1 +1,40 @@
-{}
+{
+  "meta": "Welcome",
+  "progress": "Step {step} of {total}",
+  "next": "Continue",
+  "skip": "Skip for now",
+  "back": "Back",
+  "welcome": {
+    "title": "Welcome to the crew.",
+    "body": "Four quick steps and you're on the first tee. Everything except your name can be changed or skipped.",
+    "cta": "Let's go"
+  },
+  "profile": {
+    "title": "Who's playing?",
+    "body": "This is how your friends will find you and see you on leaderboards."
+  },
+  "golf": {
+    "title": "Your game.",
+    "body": "Optional. A handicap index lets ROUND9 calculate net scores and Stableford points for you."
+  },
+  "connect": {
+    "title": "Find your people.",
+    "body": "Start a crew for your regular group, or join one with an invite link.",
+    "createTitle": "Start a crew",
+    "crewName": "Crew name",
+    "crewPlaceholder": "Sunday Four-Ball",
+    "create": "Create crew",
+    "joinTitle": "Got an invite?",
+    "inviteLabel": "Invite link",
+    "join": "Join",
+    "skip": "Skip for now",
+    "invalid": "Check the name or link and try again.",
+    "inviteInvalid": "This invite link is invalid, used or expired. Ask for a new one.",
+    "failed": "That didn't work. Try again."
+  },
+  "ready": {
+    "title": "You're in. Let's play.",
+    "body": "Create your first round, invite your crew and start keeping score.",
+    "cta": "Go to dashboard"
+  }
+}

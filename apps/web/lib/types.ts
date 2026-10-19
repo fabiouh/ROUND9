@@ -73,6 +73,8 @@ export interface RoundSummary {
   course: { id: string; name: string; city: string | null };
   crew: { id: string; name: string } | null;
   _count: { participants: number };
+  /** Caller's total strokes; only on round lists, null unless the card is complete. */
+  myStrokes?: number | null;
 }
 
 export interface Participant {
@@ -136,7 +138,7 @@ export interface CrewMember {
 
 export interface CrewDetail extends Omit<CrewSummary, '_count'> {
   members: CrewMember[];
-  rounds: (Omit<RoundSummary, 'crew'> & { course: { name: string } })[];
+  rounds: Omit<RoundSummary, 'crew'>[];
   tournaments: { id: string; name: string; status: TournamentStatus; round: { scheduledAt: string } }[];
 }
 

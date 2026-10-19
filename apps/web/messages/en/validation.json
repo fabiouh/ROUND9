@@ -11,5 +11,5 @@
   "participantsMin": "At least 2 players",
   "participantsMax": "Free tournaments have up to 8 players",
   "holesCount": "A course has 9 or 18 holes",
-  "strokeIndexUnique": "Each stroke index can be used once"
+  "strokeIndexUnique": "Use each stroke index from 1 to the number of holes exactly once"
 }

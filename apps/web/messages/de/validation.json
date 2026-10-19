@@ -11,5 +11,5 @@
   "participantsMin": "Mindestens 2 Spieler",
   "participantsMax": "Kostenlose Turniere haben bis zu 8 Spieler",
   "holesCount": "Ein Platz hat 9 oder 18 Löcher",
-  "strokeIndexUnique": "Jede Vorgabe darf nur einmal vorkommen"
+  "strokeIndexUnique": "Verwende jede Vorgabe von 1 bis zur Lochanzahl genau einmal"
 }

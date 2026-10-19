@@ -1,1 +1,40 @@
-{}
+{
+  "meta": "Willkommen",
+  "progress": "Schritt {step} von {total}",
+  "next": "Weiter",
+  "skip": "Später",
+  "back": "Zurück",
+  "welcome": {
+    "title": "Willkommen in der Crew.",
+    "body": "Vier kurze Schritte, dann stehst du am ersten Abschlag. Alles außer deinem Namen kannst du später ändern oder überspringen.",
+    "cta": "Los geht's"
+  },
+  "profile": {
+    "title": "Wer spielt?",
+    "body": "So finden dich deine Freunde und so erscheinst du in Leaderboards."
+  },
+  "golf": {
+    "title": "Dein Spiel.",
+    "body": "Optional. Mit deinem Handicap berechnet ROUND9 Netto-Ergebnisse und Stableford-Punkte für dich."
+  },
+  "connect": {
+    "title": "Finde deine Leute.",
+    "body": "Gründe eine Crew für deine Stammrunde oder tritt mit einem Einladungslink einer bei.",
+    "createTitle": "Crew gründen",
+    "crewName": "Name der Crew",
+    "crewPlaceholder": "Sonntags-Vierer",
+    "create": "Crew gründen",
+    "joinTitle": "Eingeladen worden?",
+    "inviteLabel": "Einladungslink",
+    "join": "Beitreten",
+    "skip": "Später",
+    "invalid": "Prüfe Namen oder Link und versuch es erneut.",
+    "inviteInvalid": "Dieser Einladungslink ist ungültig, verwendet oder abgelaufen. Bitte um einen neuen.",
+    "failed": "Das hat nicht geklappt. Versuch es erneut."
+  },
+  "ready": {
+    "title": "Du bist dabei. Auf geht's.",
+    "body": "Erstelle deine erste Runde, lade deine Crew ein und zählt gemeinsam.",
+    "cta": "Zum Dashboard"
+  }
+}

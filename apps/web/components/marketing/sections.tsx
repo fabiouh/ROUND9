@@ -18,7 +18,7 @@ const wrap = 'mx-auto w-full max-w-[1320px] px-4 sm:px-8';
 export async function Hero() {
   const t = await getTranslations('marketing.hero');
   return (
-    <section className="on-forest relative isolate flex min-h-[100svh] flex-col justify-end overflow-hidden bg-forest text-cream">
+    <section className="on-forest relative isolate flex h-[100svh] min-h-[640px] max-h-[1100px] flex-col justify-end overflow-hidden bg-forest text-cream">
       <HeroScene label={t('sceneLabel')} />
       {/* Scrim keeps the headline legible over any frame of the scene. */}
       <div aria-hidden className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgb(17_43_34/0.88)_0%,rgb(17_43_34/0.55)_45%,transparent_75%),linear-gradient(0deg,rgb(17_43_34/0.7)_0%,transparent_40%)]" />

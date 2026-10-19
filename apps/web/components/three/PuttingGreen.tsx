@@ -37,17 +37,17 @@ export function PuttingGreen() {
         <meshStandardMaterial map={texture} roughness={0.95} />
       </mesh>
       {/* The cup, a few feet past the ball, with a lime flag. */}
-      <group position={[2.6, 0, -4.2]}>
+      <group position={[1.9, 0, -6]}>
         <mesh rotation-x={-Math.PI / 2} position-y={0.002}>
           <circleGeometry args={[0.36, 48]} />
           <meshStandardMaterial color="#0b1a14" roughness={1} />
         </mesh>
-        <mesh position-y={2.4} castShadow>
-          <cylinderGeometry args={[0.025, 0.025, 4.8, 12]} />
+        <mesh position-y={1.5} castShadow>
+          <cylinderGeometry args={[0.025, 0.025, 3, 12]} />
           <meshStandardMaterial color="#f5f3eb" roughness={0.4} />
         </mesh>
-        <mesh position={[0.45, 4.45, 0]} castShadow>
-          <boxGeometry args={[0.9, 0.55, 0.01]} />
+        <mesh position={[0.4, 2.75, 0]} castShadow>
+          <boxGeometry args={[0.75, 0.46, 0.01]} />
           <meshStandardMaterial color="#c7f279" roughness={0.7} />
         </mesh>
       </group>

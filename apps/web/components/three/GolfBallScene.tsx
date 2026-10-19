@@ -40,12 +40,13 @@ export default function GolfBallScene() {
         <div aria-hidden className="h-full w-full">
           <Canvas
             dpr={[1, 1.75]}
+            shadows
             frameloop={visible ? 'always' : 'never'}
-            camera={{ position: [-0.6, 1.25, 4.4], fov: 32, near: 0.1, far: 80 }}
+            camera={{ position: [-0.4, 1.6, 8], fov: 30, near: 0.1, far: 80 }}
             gl={{ antialias: true, powerPreference: 'low-power' }}
           >
             <color attach="background" args={['#112b22']} />
-            <fog attach="fog" args={['#112b22', 9, 26]} />
+            <fog attach="fog" args={['#112b22', 12, 30]} />
             <SceneLighting />
             <PuttingGreen />
             <GolfBall animate />

@@ -4,7 +4,7 @@
  */
 export function SceneFallback({ label }: { label: string }) {
   return (
-    <svg viewBox="0 0 800 600" role="img" aria-label={label} className="h-full w-full" preserveAspectRatio="xMidYMid slice">
+    <svg viewBox="0 0 800 600" role="img" aria-label={label} className="h-full w-full" preserveAspectRatio="xMaxYMid slice">
       <defs>
         <radialGradient id="r9-green" cx="45%" cy="85%" r="80%">
           <stop offset="0" stopColor="#3b6b49" />
@@ -20,16 +20,16 @@ export function SceneFallback({ label }: { label: string }) {
           <circle cx="7" cy="6" r="3.2" fill="#000" opacity="0.07" />
         </pattern>
         <clipPath id="r9-ball-clip">
-          <circle cx="330" cy="430" r="92" />
+          <circle cx="610" cy="420" r="84" />
         </clipPath>
       </defs>
       <rect width="800" height="600" fill="url(#r9-green)" />
-      <ellipse cx="560" cy="360" rx="26" ry="7" fill="#08140f" />
-      <rect x="557" y="140" width="5" height="222" fill="#f5f3eb" />
-      <path d="M562 142 h64 v38 h-64z" fill="#c7f279" />
-      <ellipse cx="340" cy="520" rx="110" ry="18" fill="#08140f" opacity="0.45" />
-      <circle cx="330" cy="430" r="92" fill="url(#r9-ball)" />
-      <rect x="230" y="330" width="200" height="200" fill="url(#r9-dimples)" clipPath="url(#r9-ball-clip)" />
+      <ellipse cx="700" cy="330" rx="20" ry="5" fill="#08140f" />
+      <rect x="698" y="150" width="4" height="181" fill="#f5f3eb" />
+      <path d="M702 152 h52 v30 h-52z" fill="#c7f279" />
+      <ellipse cx="620" cy="500" rx="100" ry="16" fill="#08140f" opacity="0.45" />
+      <circle cx="610" cy="420" r="84" fill="url(#r9-ball)" />
+      <rect x="520" y="330" width="180" height="180" fill="url(#r9-dimples)" clipPath="url(#r9-ball-clip)" />
     </svg>
   );
 }
