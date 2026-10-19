@@ -2,10 +2,12 @@
   "name": "round9",
   "private": true,
   "packageManager": "pnpm@10.8.0",
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
-    "dev": "pnpm -r --parallel --filter ./apps/** dev",
-    "build": "pnpm -r build",
+    "dev": "pnpm --filter @round9/shared build && pnpm --parallel --filter \"./apps/*\" --filter @round9/shared dev",
+    "build": "pnpm --filter @round9/shared build && pnpm -r --filter \"./apps/*\" build",
     "test": "pnpm -r test",
     "typecheck": "pnpm -r typecheck",
     "db:up": "docker compose up -d postgres",

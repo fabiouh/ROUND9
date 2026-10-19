@@ -5,14 +5,15 @@
   "type": "module",
   "scripts": {
     "build": "prisma generate && tsc -p tsconfig.build.json",
-    "dev": "tsc -p tsconfig.build.json --watch --preserveWatchOutput & node --env-file-if-exists=.env --watch-path=dist dist/main.js",
+    "dev": "prisma generate && tsc -p tsconfig.build.json && (tsc -p tsconfig.build.json --watch --preserveWatchOutput & node --env-file-if-exists=.env --watch-path=dist dist/main.js)",
     "start": "node dist/main.js",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "vitest run",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
     "prisma:deploy": "prisma migrate deploy",
-    "prisma:seed": "node --env-file-if-exists=.env --experimental-strip-types prisma/seed.ts"
+    "prisma:seed": "node --env-file-if-exists=.env --experimental-strip-types prisma/seed.ts",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@nestjs/common": "12.2.0",
