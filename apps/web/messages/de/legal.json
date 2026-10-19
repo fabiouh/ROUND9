@@ -1,0 +1,39 @@
+{
+  "draft": "Entwurf — muss vor dem Launch vom Betreiber und einer Rechtsberatung geprüft werden. Felder in eckigen Klammern sind Platzhalter.",
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "sections": [
+      { "id": "controller", "title": "Verantwortlicher", "body": "[Name des Unternehmens], [Straße], [PLZ Ort], [Land]. E-Mail: [Datenschutz-Kontakt]." },
+      { "id": "data", "title": "Welche Daten wir verarbeiten", "body": "Kontodaten von unserem Identitätsanbieter Auth0 (E-Mail-Adresse, Name, Profilbild), die Profilangaben, die du machst (Anzeigename, Benutzername, Land, selbst angegebenes Handicap), und die Golfdaten, die du anlegst: Crews, Runden, Turniere und Scores. Dein Passwort sehen oder speichern wir nie." },
+      { "id": "purpose", "title": "Wozu", "body": "Um ROUND9 bereitzustellen: deine Runden und Scores den Spielern und Crews zu zeigen, die du auswählst, und dein Konto zu schützen. Rechtsgrundlage: Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO)." },
+      { "id": "processors", "title": "Auftragsverarbeiter", "body": "Authentifizierung durch Auth0 (Okta Inc.). Hosting: [Hosting-Anbieter, Region]. Datenbank: [Datenbank-Anbieter, Region]." },
+      { "id": "cookies", "title": "Cookies", "body": "ROUND9 verwendet ausschließlich technisch notwendige Cookies: ein verschlüsseltes Sitzungs-Cookie, das dich angemeldet hält, ein kurzlebiges Cookie, das den Login absichert, und ein Cookie für deine Sprache. Wir verwenden keine Analyse- oder Werbe-Cookies – daher gibt es nichts ein- oder abzuwählen." },
+      { "id": "rights", "title": "Deine Rechte", "body": "Du kannst Auskunft, Berichtigung und Löschung verlangen. Wenn du dein Konto in den Einstellungen löschst, werden dein ROUND9-Profil, deine eigenen Crews, von dir erstellte Runden und deine Scores entfernt. Für alle weiteren Anliegen: [Datenschutz-Kontakt]. Du kannst dich bei deiner Datenschutzbehörde beschweren." }
+    ]
+  },
+  "terms": {
+    "title": "Nutzungsbedingungen",
+    "sections": [
+      { "id": "service", "title": "Der Dienst", "body": "ROUND9 hilft Golfern, private Runden, Crews und Turniere zu organisieren. Der Dienst ist derzeit kostenlos. Geplante bezahlte Pläne sind nicht verfügbar." },
+      { "id": "handicaps", "title": "Handicaps und Ergebnisse", "body": "Handicaps werden von Nutzern eingegeben und nicht überprüft. Von ROUND9 berechnete Spielvorgaben und Ergebnisse dienen nur dem freundschaftlichen Wettkampf und sind keine offiziellen Ergebnisse eines Golfverbands." },
+      { "id": "conduct", "title": "Deine Inhalte", "body": "Du bist für die Inhalte verantwortlich, die du anlegst, einschließlich Platzdaten. Lade niemanden ein, der einer Einladung nicht zugestimmt hat." },
+      { "id": "provider", "title": "Anbieter", "body": "[Name des Unternehmens], [Anschrift]. Vollständige Bedingungen werden vom Betreiber bereitgestellt." }
+    ]
+  },
+  "imprint": {
+    "title": "Impressum",
+    "sections": [
+      { "id": "provider", "title": "Diensteanbieter", "body": "[Name und Rechtsform des Unternehmens]\n[Straße]\n[PLZ Ort], [Land]" },
+      { "id": "contact", "title": "Kontakt", "body": "E-Mail: [Kontakt-E-Mail]\nTelefon: [Telefonnummer]" },
+      { "id": "register", "title": "Register", "body": "[Firmenbuch und Nummer]\nUID: [Umsatzsteuer-Identifikationsnummer]" },
+      { "id": "responsible", "title": "Verantwortlich für den Inhalt", "body": "[Name], [Anschrift]" }
+    ]
+  },
+  "contact": {
+    "title": "Kontakt",
+    "sections": [
+      { "id": "email", "title": "E-Mail", "body": "[Kontakt-E-Mail — wird ergänzt]" },
+      { "id": "support", "title": "Support", "body": "Fragen zu deinem Konto oder einer Runde? Schreib an [Support-E-Mail] und nenne deinen ROUND9-Benutzernamen." }
+    ]
+  }
+}

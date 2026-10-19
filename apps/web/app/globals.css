@@ -1,0 +1,81 @@
+@import 'tailwindcss';
+@import '../styles/tokens.css';
+
+@theme inline {
+  --color-forest: var(--forest);
+  --color-deep: var(--deep);
+  --color-lime: var(--lime);
+  --color-cream: var(--cream);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-sage: var(--sage);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-muted: var(--muted);
+  --color-danger: var(--danger);
+
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-feature-settings: 'ss01', 'tnum' 0;
+  }
+  ::selection {
+    background: var(--lime);
+    color: var(--forest);
+  }
+  :focus-visible {
+    outline: 2px solid var(--forest);
+    outline-offset: 2px;
+  }
+  .on-forest :focus-visible {
+    outline-color: var(--lime);
+  }
+}
+
+@layer components {
+  /* Editorial display type: oversized, tight, controlled. */
+  .display {
+    font-weight: 600;
+    letter-spacing: -0.045em;
+    line-height: 0.92;
+  }
+  .heading {
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1.02;
+  }
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .num {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

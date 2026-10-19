@@ -1,0 +1,39 @@
+{
+  "draft": "Draft — requires review by the business owner and legal counsel before launch. Bracketed fields are placeholders.",
+  "privacy": {
+    "title": "Privacy Policy",
+    "sections": [
+      { "id": "controller", "title": "Controller", "body": "[Legal entity name], [Street address], [Postcode City], [Country]. Email: [privacy contact email]." },
+      { "id": "data", "title": "What we process", "body": "Account data from our identity provider Auth0 (email address, name, profile picture), the profile you enter (display name, username, country, self-reported handicap index), and the golf data you create: crews, rounds, tournaments and scores. We never see or store your password." },
+      { "id": "purpose", "title": "Why", "body": "To provide ROUND9: show your rounds and scores to the players and crews you choose, and to keep your account secure. Legal basis: performance of a contract (Art. 6(1)(b) GDPR)." },
+      { "id": "processors", "title": "Processors", "body": "Authentication by Auth0 (Okta Inc.). Hosting: [hosting provider, region]. Database: [database provider, region]." },
+      { "id": "cookies", "title": "Cookies", "body": "ROUND9 only uses strictly necessary cookies: an encrypted session cookie that keeps you signed in, a short-lived cookie that secures the login flow, and a cookie that remembers your language. We use no analytics or advertising cookies, so there is nothing to opt in or out of." },
+      { "id": "rights", "title": "Your rights", "body": "You can access, correct and delete your data. Deleting your account in Settings removes your ROUND9 profile, crews you own, rounds you created and your scores. Contact [privacy contact email] for any other request. You may lodge a complaint with your data protection authority." }
+    ]
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "sections": [
+      { "id": "service", "title": "The service", "body": "ROUND9 helps golfers organize private rounds, crews and tournaments. It is currently offered free of charge. Proposed paid plans are not available." },
+      { "id": "handicaps", "title": "Handicaps and results", "body": "Handicap indexes are entered by users and are not verified. Playing handicaps and results calculated by ROUND9 are for friendly competition only and are not official results of any golf association." },
+      { "id": "conduct", "title": "Your content", "body": "You are responsible for the content you add, including course data. Do not invite people who have not agreed to receive an invitation." },
+      { "id": "provider", "title": "Provider", "body": "[Legal entity name], [Registered address]. Full terms to be supplied by the business owner." }
+    ]
+  },
+  "imprint": {
+    "title": "Imprint",
+    "sections": [
+      { "id": "provider", "title": "Service provider", "body": "[Legal entity name and legal form]\n[Street address]\n[Postcode City], [Country]" },
+      { "id": "contact", "title": "Contact", "body": "Email: [contact email]\nPhone: [phone number]" },
+      { "id": "register", "title": "Register", "body": "[Company register and number]\nVAT ID: [VAT identification number]" },
+      { "id": "responsible", "title": "Responsible for content", "body": "[Name], [Address]" }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "sections": [
+      { "id": "email", "title": "Email", "body": "[contact email — to be provided]" },
+      { "id": "support", "title": "Support", "body": "Questions about your account or a round? Write to [support email] and include your ROUND9 username." }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+/* ROUND9 design tokens. Brand palette is fixed; everything else derives from it. */
+:root {
+  --forest: #112b22;
+  --deep: #183b2d;
+  --lime: #c7f279;
+  --cream: #f5f3eb;
+  --paper: #fafaf6;
+  --ink: #202822;
+  --sage: #aabbae;
+
+  --line: rgb(32 40 34 / 0.12);
+  --line-strong: rgb(32 40 34 / 0.24);
+  --muted: rgb(32 40 34 / 0.62);
+  --on-forest-muted: rgb(245 243 235 / 0.66);
+  --danger: #a33a2b;
+
+  --radius-sm: 4px;
+  --radius: 8px;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}

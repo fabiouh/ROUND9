@@ -1,0 +1,15 @@
+{
+  "required": "Pflichtfeld",
+  "tooShort": "Zu kurz",
+  "tooLong": "Zu lang",
+  "username": "3–24 Zeichen: Kleinbuchstaben, Zahlen und Unterstriche",
+  "usernameTaken": "Dieser Benutzername ist vergeben",
+  "country": "Wähle ein Land",
+  "url": "Gib einen vollständigen https://-Link ein",
+  "number": "Gib eine Zahl ein",
+  "handicapRange": "Das Handicap muss zwischen -10 und 54 liegen",
+  "participantsMin": "Mindestens 2 Spieler",
+  "participantsMax": "Kostenlose Turniere haben bis zu 8 Spieler",
+  "holesCount": "Ein Platz hat 9 oder 18 Löcher",
+  "strokeIndexUnique": "Jede Vorgabe darf nur einmal vorkommen"
+}

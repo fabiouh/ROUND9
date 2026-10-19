@@ -1,0 +1,15 @@
+{
+  "required": "Required",
+  "tooShort": "Too short",
+  "tooLong": "Too long",
+  "username": "3–24 characters: lowercase letters, numbers and underscores",
+  "usernameTaken": "That username is taken",
+  "country": "Choose a country",
+  "url": "Enter a full https:// link",
+  "number": "Enter a number",
+  "handicapRange": "Handicap index must be between -10 and 54",
+  "participantsMin": "At least 2 players",
+  "participantsMax": "Free tournaments have up to 8 players",
+  "holesCount": "A course has 9 or 18 holes",
+  "strokeIndexUnique": "Each stroke index can be used once"
+}

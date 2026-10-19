@@ -1,0 +1,42 @@
+{
+  "brand": { "tagline": "Golf ist besser zusammen.", "alt": "Deine Runde. Deine Crew." },
+  "locale": { "label": "Sprache", "en": "English", "de": "Deutsch" },
+  "actions": {
+    "close": "Schließen",
+    "save": "Änderungen speichern",
+    "saving": "Wird gespeichert…",
+    "saved": "Gespeichert",
+    "cancel": "Abbrechen",
+    "continue": "Weiter",
+    "back": "Zurück",
+    "skip": "Später",
+    "copy": "Link kopieren",
+    "copied": "Kopiert",
+    "retry": "Erneut versuchen",
+    "logout": "Abmelden",
+    "login": "Anmelden",
+    "getStarted": "Loslegen"
+  },
+  "status": {
+    "available": "Verfügbar",
+    "upcoming": "Demnächst",
+    "demoData": "Demodaten · fiktive Spieler"
+  },
+  "formats": { "STROKE_PLAY": "Zählspiel", "STABLEFORD": "Stableford", "MATCH_PLAY": "Lochspiel" },
+  "roundStatus": { "SCHEDULED": "Geplant", "IN_PROGRESS": "Läuft", "COMPLETED": "Beendet", "CANCELLED": "Abgesagt" },
+  "tournamentStatus": { "UPCOMING": "Bevorstehend", "LIVE": "Live", "COMPLETED": "Beendet", "CANCELLED": "Abgesagt" },
+  "roles": { "OWNER": "Inhaber", "ADMIN": "Admin", "MEMBER": "Mitglied" },
+  "experience": { "BEGINNER": "Gerade angefangen", "INTERMEDIATE": "Regelmäßig am Platz", "ADVANCED": "Niedriges Handicap", "EXPERT": "Turnierspieler" },
+  "holes": "{count} Löcher",
+  "players": "{count, plural, one {# Spieler} other {# Spieler}}",
+  "members": "{count, plural, one {# Mitglied} other {# Mitglieder}}",
+  "scorecard": { "caption": "Scorekarte", "hole": "Loch", "par": "Par", "strokeIndex": "Hcp", "out": "Out", "in": "In", "total": "Ges" },
+  "leaderboard": { "caption": "Leaderboard", "position": "Pl.", "player": "Spieler", "thru": "Loch", "gross": "Brutto", "net": "Netto", "points": "Pkt", "finished": "F" },
+  "photo": { "placeholder": "Platzhalter Foto" },
+  "errors": {
+    "generic": "Etwas ist schiefgelaufen. Versuch es gleich noch einmal.",
+    "notFound": "Diese Seite gibt es nicht oder du hast keinen Zugriff darauf.",
+    "notFoundTitle": "Ins Aus",
+    "home": "Zur Startseite"
+  }
+}

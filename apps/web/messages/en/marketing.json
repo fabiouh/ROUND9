@@ -1,0 +1,142 @@
+{
+  "meta": {
+    "title": "ROUND9 — Golf is better together",
+    "description": "Organize private golf rounds, challenge your friends and keep score together. Private rounds, crews and tournaments for golfers."
+  },
+  "nav": {
+    "label": "Main",
+    "how": "How it works",
+    "features": "Features",
+    "tournaments": "Tournaments",
+    "pricing": "Pricing",
+    "openMenu": "Open menu",
+    "menu": "Menu"
+  },
+  "hero": {
+    "eyebrow": "Private rounds · Crews · Tournaments",
+    "title1": "Golf is",
+    "title2": "better",
+    "title3": "together.",
+    "lead": "Your rounds. Your crew. Your competition.",
+    "body": "Organize private golf rounds, challenge your friends, and make every round count.",
+    "primary": "Get started — It's free",
+    "secondary": "Explore ROUND9",
+    "sceneLabel": "A golf ball resting on a putting green, a lime flag in the cup behind it."
+  },
+  "social": {
+    "eyebrow": "The social golf experience",
+    "title": "More than a round.",
+    "body": "The best part of golf happens between the shots: the walk, the banter, the side bet on the 18th. ROUND9 keeps your group together from the first message to the final putt.",
+    "photo": "Four friends walking up the 18th fairway at golden hour, bags on shoulders",
+    "items": {
+      "organize": { "title": "Organize rounds", "body": "Course, tee time, format. Set up in under a minute." },
+      "invite": { "title": "Invite your crew", "body": "One private link. No group-chat archaeology." },
+      "compete": { "title": "Compete together", "body": "Live scores and a leaderboard everyone can follow." },
+      "remember": { "title": "Remember every round", "body": "Every card kept, every rivalry on record." }
+    }
+  },
+  "how": {
+    "eyebrow": "How it works",
+    "title": "From tee time to trophy in three steps.",
+    "steps": {
+      "create": { "title": "Create your round", "body": "Choose your golf course, date, tee time and game format." },
+      "crew": { "title": "Bring your crew", "body": "Invite friends to join your private round." },
+      "play": { "title": "Play and compete", "body": "Track scores, follow the leaderboard, and celebrate the winner." }
+    },
+    "preview": {
+      "roundTitle": "Saturday nine",
+      "course": "Course",
+      "courseValue": "Demo Links",
+      "when": "Tee time",
+      "whenValue": "Sat · 08:40",
+      "format": "Format",
+      "inviteLabel": "Private invite link",
+      "inviteNote": "Single use · expires in 14 days",
+      "joined": "Joined"
+    }
+  },
+  "tournaments": {
+    "eyebrow": "Private tournaments",
+    "title": "A little competition never hurt.",
+    "body": "Run your own club championship for eight. Set the format, send the invites, and let the leaderboard settle the debate.",
+    "board": "Spring Cup · Stableford · after 18",
+    "features": {
+      "create": "Tournament creation",
+      "invite": "Player invitations",
+      "flights": "Flights",
+      "live": "Live scoring",
+      "leaderboards": "Leaderboards",
+      "stableford": "Stableford",
+      "stroke": "Stroke play",
+      "match": "Match play"
+    }
+  },
+  "crew": {
+    "eyebrow": "Your crew",
+    "title": "Your people. Your game.",
+    "body": "A crew is your private golf circle — the Sunday four-ball, the office league, the friends from the range. Only members can see it.",
+    "photo": "A group laughing around a golf cart after a round, scorecards in hand",
+    "features": {
+      "private": "Private groups",
+      "invites": "Crew invitations",
+      "shared": "Shared rounds",
+      "standings": "Season standings",
+      "rivalries": "Friendly rivalries"
+    }
+  },
+  "preview": {
+    "eyebrow": "Inside the app",
+    "title": "Built for the walk between shots.",
+    "tabs": { "dashboard": "Dashboard", "round": "New round", "leaderboard": "Leaderboard", "crew": "Crew", "scorecard": "Scorecard" },
+    "greeting": "Morning, Lena.",
+    "upcoming": "Upcoming",
+    "quick": "Quick actions",
+    "createRound": "Create round",
+    "createTournament": "Create tournament",
+    "invite": "Invite friends",
+    "crewName": "Sunday Four-Ball",
+    "crewMeta": "Private crew · 6 members"
+  },
+  "pricing": {
+    "eyebrow": "Pricing",
+    "title": "Start free. Stay for the rivalry.",
+    "note": "Proposed pricing. Paid plans are not available yet — everything in ROUND9 is currently free.",
+    "plans": { "FREE": "Free", "PLUS": "ROUND9 Plus", "CREW": "ROUND9 Crew" },
+    "interval": { "month": "/ month", "year": "/ year per crew" },
+    "cta": "Get started",
+    "soon": "Coming soon",
+    "features": {
+      "unlimitedRounds": "Unlimited private rounds",
+      "friendsCrews": "Friends and crews",
+      "liveScorecards": "Live scorecards",
+      "tournaments8": "Private tournaments with up to 8 players",
+      "basicLeaderboards": "Basic leaderboards",
+      "everythingFree": "Everything in Free",
+      "advancedStats": "Advanced statistics",
+      "expandedTournaments": "Expanded tournament features",
+      "seasonLeaderboards": "Season leaderboards",
+      "customChallenges": "Custom challenges",
+      "crew30": "Up to 30 crew members",
+      "sharedStandings": "Shared season standings",
+      "tournamentOrganization": "Tournament organization",
+      "flightManagement": "Flight management",
+      "freeParticipation": "Free participation for invited members"
+    }
+  },
+  "cta": {
+    "title": "Your next round starts here.",
+    "body": "Less organizing. More golfing.",
+    "button": "Create your account"
+  },
+  "footer": {
+    "product": "Product",
+    "company": "Company",
+    "legal": "Legal",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "imprint": "Imprint",
+    "cookies": "Cookie preferences",
+    "rights": "© {year} ROUND9. Built for golfers who play together."
+  }
+}

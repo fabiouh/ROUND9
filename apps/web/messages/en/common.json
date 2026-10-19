@@ -1,0 +1,42 @@
+{
+  "brand": { "tagline": "Golf is better together.", "alt": "Your round. Your crew." },
+  "locale": { "label": "Language", "en": "English", "de": "Deutsch" },
+  "actions": {
+    "close": "Close",
+    "save": "Save changes",
+    "saving": "Saving…",
+    "saved": "Saved",
+    "cancel": "Cancel",
+    "continue": "Continue",
+    "back": "Back",
+    "skip": "Skip for now",
+    "copy": "Copy link",
+    "copied": "Copied",
+    "retry": "Try again",
+    "logout": "Log out",
+    "login": "Log in",
+    "getStarted": "Get started"
+  },
+  "status": {
+    "available": "Available",
+    "upcoming": "Upcoming",
+    "demoData": "Demo data · fictional players"
+  },
+  "formats": { "STROKE_PLAY": "Stroke play", "STABLEFORD": "Stableford", "MATCH_PLAY": "Match play" },
+  "roundStatus": { "SCHEDULED": "Scheduled", "IN_PROGRESS": "In progress", "COMPLETED": "Completed", "CANCELLED": "Cancelled" },
+  "tournamentStatus": { "UPCOMING": "Upcoming", "LIVE": "Live", "COMPLETED": "Completed", "CANCELLED": "Cancelled" },
+  "roles": { "OWNER": "Owner", "ADMIN": "Admin", "MEMBER": "Member" },
+  "experience": { "BEGINNER": "Just starting", "INTERMEDIATE": "Regular player", "ADVANCED": "Low handicapper", "EXPERT": "Competitive" },
+  "holes": "{count} holes",
+  "players": "{count, plural, one {# player} other {# players}}",
+  "members": "{count, plural, one {# member} other {# members}}",
+  "scorecard": { "caption": "Scorecard", "hole": "Hole", "par": "Par", "strokeIndex": "SI", "out": "Out", "in": "In", "total": "Tot" },
+  "leaderboard": { "caption": "Leaderboard", "position": "Pos", "player": "Player", "thru": "Thru", "gross": "Gross", "net": "Net", "points": "Pts", "finished": "F" },
+  "photo": { "placeholder": "Photo placeholder" },
+  "errors": {
+    "generic": "Something went wrong. Try again in a moment.",
+    "notFound": "This page doesn't exist or you don't have access to it.",
+    "notFoundTitle": "Out of bounds",
+    "home": "Back to home"
+  }
+}
